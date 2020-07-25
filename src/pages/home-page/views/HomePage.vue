@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div :class="$style.grid">{{ name }}</div>
+        <div :class="$style.grid" ref="lijiazhan">{{ name }}</div>
         <div :class="$style.img" @click="changeName"></div>
     </div>
 </template>
@@ -16,8 +16,7 @@
         },
 
         created() {
-            console.log(process.env.NODE_ENV);
-            console.log(this);
+
         },
 
         methods: {

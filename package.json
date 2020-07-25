@@ -8,7 +8,9 @@
     "build": "webpack --env development --config build/webpack.dev.config.js",
     "watch": "webpack --env development --watch --config build/webpack.dev.config.js",
     "prod": "webpack --env production --config build/webpack.prod.config.js",
-    "report": "npm run prod --report"
+    "report": "npm run prod --report",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -42,6 +44,7 @@
     "url-loader": "^4.1.0",
     "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.5.2",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.8.0",
     "webpack-cli": "^3.3.12",

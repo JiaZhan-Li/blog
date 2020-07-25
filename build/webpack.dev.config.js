@@ -18,7 +18,7 @@ module.exports = async (env) => {
             port,
             host: config.dev.host,
             disableHostCheck: true, // 搭配 host: '0.0.0.0'
-            contentBase: path.join(__dirname, '../static'),
+            contentBase: false,
             publicPath: '/',
             hot: true,
             inline: true,
@@ -27,17 +27,17 @@ module.exports = async (env) => {
             quiet: true, // necessary for friendly-errors-webpack-plugin
             compress: true,
             clientLogLevel: 'warning',
-            index: 'home-page.html',
+            index: 'index.html',
             historyApiFallback: {
                 rewrites: [{
                     from: /.*/,
-                    to: '/home-page.html'
+                    to: '/docs/index.html'
                 }]
             },
             overlay: {
                 warning: false,
                 errors: true
-            },
+            }
         },
 
         plugins: [
