@@ -36,4 +36,4 @@ jobs:
 
     - name: Deploy demo
       # 发布demo
-      run: ossutil cp -rf ./docs/.vuepress/dist/ oss://lijiazhan-blog-demo/
+      run: ossutil cp -rf ./dist/ oss://lijiazhan-blog-demo/
