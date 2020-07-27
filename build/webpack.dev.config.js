@@ -2,7 +2,6 @@
  * Created by Jiazhan-Li on 2020/6/23.
  */
 
-const path = require('path');
 const merge = require('webpack-merge');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const portfinder = require('portfinder');
@@ -31,7 +30,7 @@ module.exports = async (env) => {
             historyApiFallback: {
                 rewrites: [{
                     from: /.*/,
-                    to: '/docs/index.html'
+                    to: '/index.html'
                 }]
             },
             overlay: {
