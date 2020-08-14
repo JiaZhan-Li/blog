@@ -121,7 +121,7 @@ module.exports = (env = 'development') => {
                     loader: 'url-loader',
                     options: {
                         limit: 10000,
-                        name: 'img/[name].[hash:5].[ext]'
+                        name: `img/[name]${ env === 'production' ? '.[hash:5]' : ''}.[ext]`
                     }
                 },
             ]
@@ -133,8 +133,8 @@ module.exports = (env = 'development') => {
             new VueLoaderPlugin(),
 
             new MiniCssExtractPlugin({
-                filename: 'css/[name].css',
-                chunkFilename: 'css/[id].css',
+                filename: `css/[name]${ env === 'production' ? '.[contenthash:5]' : ''}.css`,
+                chunkFilename: `css/[id]${ env === 'production' ? '.[contenthash:5]' : ''}.css`,
             }),
 
             ...getEntryNames().map((name) => {
